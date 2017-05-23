@@ -1,12 +1,11 @@
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        page:'./js/test/app.js',
-        pages:'./js/test1/app1.js'
+        page:'./js/app.js'
     },
     output: {
         path: __dirname,
-        filename: 'build/[name]bundle.js'
+        filename: 'public/js/[name]bundle.js'
     },
     module: {
         loaders: [
@@ -24,6 +23,12 @@ module.exports = {
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader?name=./fonts/[name].[ext]'
+            },
+            {
+                // 小于8KB的图片使用base64内联
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192'
+
             }
         ]
     }
