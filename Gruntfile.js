@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                     nodeArgs: ['--use_strict'],
                     //nodeArgs: ['--use_strict', '--trace_gc'],
                     env: {
-                        PORT: '3000',
+                        PORT: '4000',
                         NODE_ENV: 'dev'
                     },
                     ignore: ['node_modules/**', 'Gruntfle.js', 'views/**']
