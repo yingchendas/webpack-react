@@ -1,0 +1,10 @@
+{
+  "snsapi": {
+    "base": "snsapi_base",
+    "userinfo": "snsapi_userinfo"
+  },
+  "appid": "",
+  "app_secret": "",
+  "key": "",
+  "protal_code": ""
+}

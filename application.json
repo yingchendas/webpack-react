@@ -1,0 +1,77 @@
+{
+  "pro": {
+    "mongo": "mongodb://new_protection:new_protection_123@dds-2ze7464e7df5a6b41.mongodb.rds.aliyuncs.com:3717,dds-2ze7464e7df5a6b42.mongodb.rds.aliyuncs.com:3717/new_protection?replicaSet=mgset-1983913",
+    "root_path": {
+      "client": "/client",
+      "manager": "/manager",
+      "pay": "/pay",
+      "callback": "/callback"
+    },
+    "schedule": {
+      "host": "localhost",
+      "port": "3002"
+    },
+    "interface": {
+      "host": "localhost",
+      "port": "3001",
+      "rootPath": "/interface"
+    },
+    "zookeeper": "localhost:10001,localhost:10002,localhost:10003",
+    "token": {
+    },
+    "uploadPath": "/data/web/file_upload",
+    "domainName": "http://wx.fungotech.cn",
+    "private_key": "nMYKTjV164m3Adun0gIruKVKlhnYBTQd",
+    "public_key": "wJnd9WN8TV8V4zDU"
+  },
+  "dev": {
+    "mongo": "mongodb://new_protection:new_protection_123@localhost:27017/new_protection",
+    "root_path": {
+      "client": "/client",
+      "manager": "/manager",
+      "pay": "/pay",
+      "callback": "/callback"
+    },
+    "schedule": {
+      "host": "localhost",
+      "port": "3002"
+    },
+    "interface": {
+      "host": "localhost",
+      "port": "3001",
+      "rootPath": "/interface"
+    },
+    "zookeeper": "121.42.148.92:10001,121.42.148.92:10002,121.42.148.92:10003",
+    "token": {
+    },
+    "uploadPath": "/home/xr/upload",
+    "domainName": "http://localhost:3000",
+    "private_key": "nMYKTjV164m3Adun0gIruKVKlhnYBTQd",
+    "public_key": "wJnd9WN8TV8V4zDU"
+  },
+  "test": {
+    "mongo": "mongodb://new_protection:new_protection_123@localhost:27017/new_protection",
+    "root_path": {
+      "client": "/client",
+      "manager": "/manager",
+      "pay": "/pay",
+      "callback": "/callback"
+    },
+    "schedule": {
+      "host": "localhost",
+      "port": "3002"
+    },
+    "interface": {
+      "host": "localhost",
+      "port": "3001",
+      "rootPath": "/interface"
+    },
+    "zookeeper": "localhost:10001,localhost:10002,localhost:1000",
+    "token": {
+    },
+    "uploadPath": "/htdocs/node/file_upload",
+    "domainName": "http://test.fungotech.cn",
+    "private_key": "nMYKTjV164m3Adun0gIruKVKlhnYBTQd",
+    "public_key": "wJnd9WN8TV8V4zDU"
+  }
+}

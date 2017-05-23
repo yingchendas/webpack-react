@@ -1,0 +1,1136 @@
+
+#carInfo {
+    display: block;
+}
+#policyPlan {
+    display: none;
+}
+#companyPrice {
+    display: none;
+}
+#checkedPolicy{
+    display: none;
+}
+#payWay{
+    display: none;
+}
+._active{
+    color: #1EA7F8;
+}
+._activeBg{
+    background: #1EA7F8 !important;
+}
+._activeBr{
+    border-color: #1EA7F8 !important; 
+}
+.companyPriceFail{
+    background: #F8F8F8;
+    padding-bottom: .5rem;
+}
+.weui_btn{
+    margin-bottom: 15px;
+}
+.weui_input {
+    color: #999;
+}
+.weui_cell_hd{
+    color: #666;
+}
+.weui_label{
+    color: #666;
+    font-size: 1rem;
+}
+.weui_icon_success:before {
+  font-size: 23px;
+  color: #1EA7F8;
+}
+.headerTitle {
+    /*left: 8%;*/
+    padding: .8rem 0 .3rem;
+    background: #FFFFFF;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 123;
+}
+.iconImg{
+    width:20px;
+   left: -30px;
+}
+.weui_progress{
+    display: none;
+}
+/*header{
+                margin-top: .5rem;
+            }*/
+
+.titleBtn {
+    display: inline-block;
+    width: 30%;
+    height: 35px;
+    border: 1px solid #ccc;
+    background: none;
+    color: #CECECE;
+    border: none;
+    border-bottom: 5px solid #CECECE;
+    font-size: 17px !important;
+    /*border-radius: 20px;*/
+    /*background: #fff;*/
+}
+
+.btnActive {
+    color: #009944;
+    border-bottom: 5px solid #009944;
+}
+
+select {
+    direction: rtl;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*开关按钮*/
+
+.weui_switch {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 53px;
+    height: 25px;
+    border: 1px solid #f8f8f8;
+    outline: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background: #F8F8F8;
+}
+
+.weui_switch:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #ccc;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.weui_switch:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.weui_switch:checked {
+    border-color: #1EA7F8;
+    background-color: #1EA7F8;
+}
+.mui-table-view-cell{
+    border-top: 1px solid #ECECEC;
+}
+.weui_switch:checked:before {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.weui_switch:checked:after {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+}
+.weui_cells_radio .weui_check:checked + .weui_icon_checked:before {
+  display: block;
+  content: '\EA08';
+  color: #FF3300;
+  font-size: 16px;
+}
+.weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before {
+  content: '\EA06';
+  color: #FF3300;
+}
+.tou_info {
+    top: 7.5px;
+    left: 38px;
+}
+
+select {
+    direction: rtl;
+}
+
+.icon-icon-question {
+    color: #999 !important;
+}
+/*头样式*/
+.lineTitle{
+    width: 320px;
+    margin: 0 auto;
+}
+.lineTitle>div{
+    width: 20%;
+    text-align: center;
+}
+._num{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid #E3E3E3;
+}
+.num{
+    left: 8px;
+    top: 1px;
+}
+._line{
+    display: inline-block;
+    width: 59%;
+    height: 4px;
+    top: 34px;
+    background: #E3E3E3;
+}
+/*end*/
+
+
+/*弹窗样式*/
+
+.timeChange{
+   display: none; 
+}
+
+/*新增*/
+
+.cover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 123;
+    /*display: none;*/
+}
+
+.scrollBox {
+    max-height: 300px;
+    width: 90%;
+    position: fixed;
+    left: 5%;
+    right: 0;
+    top: 9rem;
+    background: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    z-index: 124;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /*border-radius: 5px;*/
+    /*display: none;*/
+}
+/*.timeChange .scrollBox{
+    height: 600px !important;
+}*/
+
+/*.scrollBox::-webkit-scrollbar{width:5px; height:5px;}
+            .scrollBox::-webkit-scrollbar-button{width:0;height:0;}
+            .scrollBox::-webkit-scrollbar-corner{display:block; }
+            .scrollBox::-webkit-scrollbar-thumb{background-clip:padding-box;background-color:rgba(233,55,145,.8);border-radius:8px;}//还可以设置滚动条的颜色
+            .scrollBox::-webkit-scrollbar-thumb:hover{background-clip:padding-box;background-color:rgba(255,255,255,0);border-radius:8px;}*/
+
+.weui_cells {
+    margin-top: 0;
+}
+
+.btnList {
+    position: fixed;
+    top: 500px;
+    width: 90%;
+    left: 5%;
+    border-radius: 10px;
+    z-index: 125;
+}
+.btnList1 {
+    position: fixed;
+    top: 500px;
+    width: 90%;
+    left: 5%;
+    border-radius: 10px;
+    z-index: 125;
+}
+
+.cancel {
+    width: 50%;
+    border-radius: 10px;
+    background: #f8f8f8;
+    font-size: 17px;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.newbtn {
+    width: 50%;
+    border-radius: 10px;
+    background: #f8f8f8;
+    font-size: 17px;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.newAddr {
+    display: none;
+}
+
+.addrList {
+    padding: 18px 0;
+}
+
+.coverTitle {
+    padding: 13px 0;
+    z-index: 125;
+    top: 103px;
+    left: 5%;
+    width: 90%;
+    position: fixed;
+    background: #1EA7F8;
+    color: #fff;
+}
+
+.coverTitle>h5 {
+    font-size: 17px;
+}
+
+._closeBtn {
+    top: 5px;
+    font-size: 1.5rem;
+    right: 15px;
+}
+
+
+/*弹窗样式结束*/
+
+
+/*车辆信息样式begin*/
+
+.carNumber {
+    /*border: 3px dashed #009944;*/
+    /*width: 98%;
+                margin-top: 20px;*/
+    padding: .2rem .5rem;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.carHost {
+    padding: .5rem;
+    font-size: 15px;
+    border-bottom: 1px solid #ECECEC;
+}
+.carHost>span{
+margin-left: 8%;}
+
+/*投保人信息*/
+.beibao,.toubao{
+    width: 93%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.guohu_dates{
+   width: 93% !important;
+   /*border: 1px solid red;*/
+    margin: 0 auto;
+    border-radius: 10px; 
+    background: #F8F8F8;
+}
+.toubao .weui_cell_hd,.toubao .weui_input{
+    color: #000 !important;
+}
+.self-selection .weui_cell{
+    padding:5px 10px !important;
+}
+.self-selection .weui_cell_ft{
+   padding: 0 .5rem !important;
+}
+.carInfo_man {
+    background: #F8F8F8;
+}
+
+/*.carInfo_man .weui_cells:after {
+    border: none;
+}*/
+
+.carInfo_man1 .weui_cells:before {
+    border: none;
+}
+
+.carInfo_man .weui_cell {}
+
+.carInfo_man .weui_cell:after {
+    border: none;
+}
+
+.carInfo_man .weui_cell:before {
+    border: none;
+}
+
+.carInfo_infoList {
+    display: none;
+}
+
+
+/*车辆信息*/
+
+.carInfo_intr p {
+    line-height: 15px;
+}
+
+
+/*选择车辆*/
+#carInfo .mui-table-view-cell {
+    padding: 1rem .5rem;
+    background: #fff;
+}
+
+.carlist {
+    margin-top: 5px;
+}
+
+.guohu_dates {
+    display: none;
+}
+
+
+/*车辆信息弹窗*/
+
+.carListCover {
+    display: none;
+}
+
+
+/*车辆信息样式结束*/
+
+
+/*保险方案样式开始*/
+
+
+.policyTime>h4 {
+    margin-left: 3%;
+    padding: 0 .2rem;
+}
+
+.buji {
+    display: inline-block;
+    padding: .1rem;
+    margin-left: 30px;
+    color: #FF3300;
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+.policyList {
+    margin-top: 10px;
+}
+
+.policyTitle {
+    /*margin-top: 15px;*/
+    display: -webkit-box;
+}
+
+.policyTitle>span {
+    text-align: center;
+    display: block;
+    border-right: 1px solid #ECECEC;
+    padding: 10px 0;
+    -webkit-box-flex: 1;
+    background: #fff;
+}
+
+.planActive {
+    border-bottom: 5px solid #1EA7F8;
+    color: #1EA7F8;
+}
+
+
+/*强制险*/
+
+.compulsory {
+    width: 100%;
+    margin: 5px auto;
+}
+
+.compulsory>h5,
+#businessRisks>h5,.businessRisksList >h5 {
+    padding: .1rem;
+    color: #1EA7F8;
+}
+
+.compulsoryList {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.compulsoryList .weui_cells:before,
+.businessRisksList .weui_cells:before {
+    border: none;
+}
+
+.compulsoryList .weui_cells:last-child:after,
+.businessRisksList .weui_cells:last-child:after {
+    border: none;
+}
+
+
+/*商业险*/
+
+#businessRisks {
+    width: 98%;
+    margin: 5px auto;
+}
+
+#changePlan {
+    /*padding: .5rem;*/
+    border:none;
+    border-radius: 5px;
+    color: #1EA7F8;
+    background: none;
+}
+
+.list {
+    border-bottom: .5px solid #CECECE;
+}
+
+.list:last-child {
+    border: none;
+}
+
+.self-selection .weui_cells:before,
+.policyListCover.weui_cells:before {
+    border: none;
+}
+
+.self-selection .weui_cells:after,
+.policyListCover.weui_cells:after {
+    border: none;
+}
+
+.policyListCover {
+    display: none;
+}
+
+.self-selection {
+    display: none;
+}
+
+
+/*保险方案样式end*/
+
+
+/*算保费样式*/
+
+
+#companyPrice ul li {
+    list-style: none;
+}
+
+#companyPrice .company_info img {
+    margin-left: 5px;
+}
+
+#companyPrice .company_info h5 {
+    margin-left: 5px;
+    margin-top: 3px;
+    font-weight: 600;
+    color: #333;
+}
+
+#companyPrice .company_info {
+    border-bottom: 1px solid #e3e3e3;
+    margin-top: 2px;
+}
+
+#companyPrice .youhui,#companyPrice .aginBtn {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    margin-top: -30px;
+    font-size: 12px;
+    /*border: .5px solid #04BE02;*/
+    border: none;
+    margin-right: .5rem;
+    background: #1EA7F8;
+}
+
+.reBtn {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    right: .8rem;
+    top: -30px;
+    /*margin-top: -15%;*/
+    font-size: 12px;
+    /*border: .5px solid #04BE02;*/
+    border: none;
+    /*margin-right: .5rem;*/
+    background: #FF7F00;
+}
+
+.loseBtn {
+    padding: .5rem 1.3rem;
+    border-radius: 5px;
+    right: 6rem;
+    top: -30px;
+    /*margin-top: -15%;*/
+    font-size: 12px;
+    border: 1px solid #FF7F00;
+    /*margin-right: 5.5rem;*/
+    background:#fff;
+    color: #FF7F00;
+}
+
+#companyPrice .mui-table-view-cell {
+    width:100%;
+}
+.company{
+    margin: 0 !important;
+}
+#companyPrice .companyBox {
+    width: 100%;
+    /*padding: .8rem 0rem;*/
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+}
+
+#companyPrice .oldPrice {
+    text-decoration: line-through;
+    margin-left: 3px;
+}
+
+#companyPrice .platformACtive {
+    /*padding: 0 .5rem .8rem;*/
+    width: 99%;
+    margin:5px auto;
+    /*background: url(../images/activeBg.png) no-repeat;
+    background-size: cover;*/
+}
+
+#companyPrice .activeTitle {
+    background: #009944;
+    width: 30%;
+}
+
+#companyPrice .activeInfo {
+    width: 62%;
+}
+
+#companyPrice .zhanwei {
+    margin-top: 10px;
+    height: 50px;
+    width: 2%;
+    background: #009944;
+    border: 1px solid #009944;
+    border-left: 2px dashed #fff;
+}
+
+#companyPrice .activeTitle,
+#companyPrice .activeInfo {
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #009944;
+}
+
+#companyPrice .totalPrice {
+    padding: .5rem;
+    margin-top: -33px;
+    /*border: .5px solid #04BE02;*/
+    margin-right: .5rem;
+}
+
+
+/*进度条*/
+
+.bar {
+    height: 30px;
+    width: 0;
+    transition: width 1.2s ease-in-out;
+    position: relative;
+    margin: -37px 0;
+    border-radius: 4px;
+}
+
+@media(max-width: 350px) {
+    .bar {
+        margin: 2.5rem 0 0.5rem;
+    }
+}
+
+.bar.mint {
+    background-color: #14c3a2;
+    background-image: repeating-linear-gradient(-45deg, #14c3a2, #14c3a2 30px, #22e8c3 30px, #22e8c3 60px);
+    background-size: 600px 100%;
+    animation: barberpole 12s linear infinite;
+    border-bottom: 0.2rem solid #0d7e68;
+}
+
+.bar.active:after,
+.bar.active:before {
+    opacity: 1;
+}
+
+.bar:before {
+    content: attr(data-skill);
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 13%;
+    padding: 10px;
+    height: 30px;
+    font-style: italic;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: opacity 2s 0.6s;
+    transition: opacity 2s 0.6s;
+    z-index: 9999999;
+}
+
+.bar:after {
+    /*content: attr(data-percent) "%";*/
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 2s 0.6s;
+}
+
+@media(max-width: 350px) {
+    .bar:after {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-moz-keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@-ms-keyframes name {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+@keyframes barberpole {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 600px 0%;
+    }
+}
+
+.bar.active[data-percent="100"] {
+    width: 80%;
+    margin: -30px 10% 0 0;
+}
+
+
+/*投保详情*/
+
+#companyPrice header div {
+    width: 100%;
+}
+
+#companyPrice header {
+    padding: 1rem;
+    background: #fff;
+    /*background: #F8F8F8;*/
+}
+
+#companyPrice .jiaoqiang {
+    padding: .8rem 1rem;
+}
+
+#companyPrice .busi_policy>h4 {
+    padding: .8rem 1rem;
+}
+
+#companyPrice .userName,
+#companyPrice .money {
+    margin-top: 3px;
+    margin-left: 3%;
+}
+
+#companyPrice .tel,
+#companyPrice .addr {
+    margin-top: 10px;
+    padding: 1rem;
+}
+
+#companyPrice .notice {
+    margin-right: 15px;
+    color: #04BE02;
+    border: 1px solid #04BE02;
+    font-size: 12px;
+    padding: .3rem;
+    border-radius: 2px;
+}
+
+
+/*新增*/
+
+#companyPrice .info_title {
+    background: #fff;
+}
+
+#companyPrice .info_title>div {
+    display: inline-block;
+    width: 33.3%;
+    padding: .3rem 0;
+}
+
+#companyPrice .bus_info>div {
+    width: 33.3%;
+    /*text-align: center;*/
+}
+
+#companyPrice .weui_cell_primary {
+    font-size: 12px;
+}
+
+#companyPrice .weui_cells {
+    margin: 0 auto;
+    width: 98%;
+    border-radius: 3px;
+}
+
+
+/*.weui_cells:before,.weui_cells:after{
+                border: none;
+            }*/
+
+#companyPrice h4 {
+    font-weight: 500;
+}
+
+#companyPrice .coverBox {
+    display: none;
+}
+
+#companyPrice .transformRotate {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition-duration: .5s, .5s, .5s;
+}
+
+#companyPrice .priceInfo {
+    /*border-top: 1px solid #e3e3e3;*/
+    padding: 0 0 1rem;
+}
+
+#companyPrice .lookInfo,#companyPrice .aginLookPrice {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: 12px;
+    /*border: .5px solid #04BE02;*/
+    border: none;
+    left: 39%;
+    bottom: -13px;
+    background: #009944;
+}
+.companyPriceFail{
+    margin-bottom: 15px;
+}
+#companyPrice .youhuiBtn {
+    padding: .5rem;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    margin-top: -8px;
+    background: #009944;
+}
+
+#companyPrice .alredYouhui {
+    padding: .5rem;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    margin-top: -8px;
+    background: #AE0000;
+}
+
+#companyPrice .weui_cells:before {
+    border: none;
+}
+
+#companyPrice .weui_cells:after {
+    border: none;
+}
+
+#companyPrice ._dikou {
+    display: none;
+}
+._policyBox{
+    margin-top: 10px;
+}
+
+/*算保费样式end*/
+/*核保及支付样式开始*/
+
+.checkedSuccess .info_title {
+    background: #fff;
+}
+
+.loadingImg{
+    display: none;
+}
+.checkedSuccess .info_title>div {
+    display: inline-block;
+    width: 33.3%;
+    padding: .3rem 0;
+}
+
+.checkedSuccess .bus_info>div {
+    width: 33.3%;
+    /*text-align: center;*/
+}
+
+.checkedSuccess .weui_cell_primary {
+    font-size: 12px;
+}
+
+.checkedSuccess .weui_cells {
+    margin: 0 auto;
+    width: 98%;
+    border-radius: 3px;
+}
+
+.payName{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.weui_input{
+        font-size: .98rem;
+    }
+    
+    .title{
+    padding: 10px;
+    font-size: 15px;
+    color:#666;
+}
+.get_btn{
+    display: inline-block;
+    right: -13px;
+    top:-8px;
+    font-size: 12px;
+    color: #333;
+    /*padding: .5rem;*/
+    border: none;
+    height: 35px;
+    width: 80px;
+    padding: 3px;
+    z-index: 3;
+    background: #ECECEC;
+    border-radius: 10px;
+}
+.btn_cover{
+    z-index: 4;
+    background:rgba(0,0,0,0.3);
+    height: 29px;
+    width: 74px;
+    display: none;
+}
+
+._addrList{
+    margin: 0rem 0;
+}
+._addrList h4{
+    font-weight: 500;
+}
+.mui-table-view-cell{
+    margin-top: 5px;
+}
+.mui-table-view-cell:first-child{
+    margin-top: 0;
+}
+._init{
+    display: block;
+}
+ul li{
+    list-style: none;
+    
+}
+._lineNone:before{
+    border: none;
+}
+._lineNone:after{
+    border: none;
+}
+._addAddr{
+    display: none;
+}
+/*投保资料*/
+.front_box{
+    margin-left: 1rem;
+    margin-top: 0;
+    display: inline-block;
+    width: 45%;
+    /*height: 9rem;*/
+    /*border: 1px solid red;*/
+    /*min-height: 9rem;
+    max-height: 15rem;*/
+}
+.jiaImg{
+    width: 90%;
+    /*position: relative;
+    z-index: 1 !important;*/
+    height: 8rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: 16px;
+    background: url(../images/camara.png) no-repeat;
+    background-size:cover;
+}
+/*.jiaImg .iconfont{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}*/
+._infoBox{
+    /*border-top: 1px solid #ECECEC;*/
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #fff;
+}
+._imgBox{
+    width: 90%;
+    z-index: 2;
+    /*background: #FFFF00;*/
+    /*background: url(../images/eg.png) no-repeat;
+    background-position: center center;
+    background-size: contain;*/
+   display: none;
+    box-shadow: 3px 3px 3px #CECECE;
+    border-radius: 10px;
+    height: 8rem;
+}
+.checkedTitle{
+    background: #fff;
+}
+.checkedTitle:before{
+    border: none; 
+}
+.delImg{
+    font-size: 1.3rem;
+    font-weight: 800;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: inline-block;
+    padding:0 .3rem;
+    background: rgba(0,0,0,0.5);
+    border-bottom-left-radius: 5px;
+    /*box-shadow: 1px 1px 1px #000000;*/
+}
+.jiaImg .icon-jia{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+.addAddrBtn{
+    /*margin: .5rem;*/
+    padding: .8rem;
+    
+}
+._more{
+   margin-right: 1rem; 
+}
+.moreAddr{
+    display: none;
+}
+/*支付方式*/
+.payWays>li{
+    margin: 0px 0;
+}
+.checkedPrice{
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+.checked_busiold{
+    text-decoration: line-through;
+}
+/*核保失败*/
+.checkedFail{
+    padding: .6rem 0;
+}
+.dataError,.stay_checked{
+    padding:0 .6rem;
+}
+.dataError>ul>li{
+    padding: .6rem 0;
+}
+.mybtn{
+    display: inline-block;
+    padding:.6rem ;
+    border-radius: 30px;
+    width: 40%;
+    color: #fff;
+}
+.checkedLine{
+    width: 50px;
+    height: 2px;
+    background: #FFBE00;
+}
+.closeChecked_btn{
+    background: #E3E3E3;
+}
+._btnBox{
+    margin-top: 15px;
+}
+.stay_checked{
+    margin-top: 10px;
+}
+.transformRotate{
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    transition-duration:.5s, .5s, .5s;
+}
+.checkedFail{
+    display: block;
+}

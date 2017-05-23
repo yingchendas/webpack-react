@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>登录</title>
+		<link rel="stylesheet" href="../css/weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common/common.css"/>
+		<style type="text/css">
+		    *{
+		        font-family: "arial rounded mt bold";
+		    }
+		.weui_input{
+				font-size: 1rem;
+			}
+			.weui_label{
+				font-size: 1rem;
+			}
+			.title{
+				padding: 10px;
+			}
+			.get_btn{
+				display: inline-block;
+				right: 16px;
+				top:2px;
+				font-size: 15px;
+				color: #CECECE;
+				background: #fff;
+				/*padding: .5rem;*/
+				border: none;
+				width: 85px;
+				padding-left: .3rem;
+				z-index: 998;
+				border-left: 1px solid #CECECE;
+			}
+			.btn_cover{
+				z-index: 999;
+				background:rgba(0,0,0,0.3);
+				height: 20px;
+				width: 80px;
+				display: none;
+			}
+			.weui_cells_form{
+				margin-top: 0px !important;
+			}
+			.addr{
+				padding:.5rem;
+			}
+			.weui_cell_hd{
+				padding: .5rem;
+				
+				width: 40px;
+			}
+			.weui_label{
+			    border-right: 1PX solid #CECECE;
+			    width: 40px;
+			}
+			.weui_cell img{
+			    width: 23px;
+			}
+			.line{
+			    display: inline-block;
+			    height: 1px;
+			    width: 60px;
+			    background: #1EA7F8;
+			    margin-top: 13px;
+			}
+			.container{
+			    padding-bottom: 1.3rem;
+			}
+		</style>
+	</head>
+	<body class="bg_f">
+		<div class="container bg_f">
+		    <div>
+                <img src="../images/loginBanner.png" width="100%" alt="" />
+            </div>  
+			<div class="weui_cells weui_cells_form">
+		        <div class="weui_cell">
+		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/userImg.png"/></label></div>
+		            <div class="weui_cell_bd weui_cell_primary pr">
+		                <input class="weui_input c_999" id="phoneNum" type="number"   placeholder="请输入手机号"/>
+		                 <button  class="get_btn get pa">获取验证码</button>
+		                  <span class="get_btn btn_cover pa"></span>
+		            </div>
+		        </div>
+		        <div class="weui_cell">
+		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/key.png"/></label></div>
+		            <div class="weui_cell_bd weui_cell_primary pr">
+		                <input class="weui_input c_999" type="number" id="checkedNum"  placeholder="请输入验证码"/>
+		               
+		            </div>
+		        </div>
+		    </div>
+		   
+		    <div class="tc">
+    			<a href="#" id="loginBtn" class="weui_btn bg_1ea" style="width: 90%;margin-top: 20px;padding: .5rem;box-shadow: 2px 2px 3px #CECECE;">登录</a> 
+    		</div>
+    		
+		</div>
+		 <div class="c_666 tc f14 bg_f" style="padding-bottom: 1rem;">
+		    <div class="tc clearfix" style="width: ;">
+		        <span class="line fl" style="margin-left: 25%;"></span>
+		        <span class="fl f16" style="margin: 0 1%;">温馨提示</span>
+		        <sapn class="line fl"></sapn>
+		    </div>
+		    <p class="f16">未注册汇保保的用户，验证成功后自动注册</p>
+		    <div style="margin-top: 15px;">
+		    	<img src="../images/wxEwm.png" alt="" />
+		    	<p>微信号关注公众号【汇保保】，购车险，更快捷，更方便。</p>
+		    </div>
+		 </div>
+	</body>
+	<script type="text/javascript" src="../js/lib/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="../js/lib/global.js"></script>
+	<script>
+	 /* 
+		   * settime:2016.8.25
+		   author:chenying
+		   describe:经销商申请
+		   */
+		$(function(){
+			/*获取验证码*/
+			$(".get").on("click",function(){
+				var phoneNum = $("#phoneNum").val();
+				var timer =null;
+				var item = $(this);
+				if(Global.tool.checkedPhone(phoneNum)){
+					var i=20;
+					$(".btn_cover").css("display","block");
+					item.text(""+i+"s");
+					timer=setInterval(function(){
+						
+						i--;
+						item.text(""+i+"s");
+						if(i==0){
+							clearInterval(timer);
+							item.text("获取验证码");
+							$(".btn_cover").css("display","none");
+							i=20;
+						}
+					},1000);
+					/*todo数据请求*/
+					
+				}
+			})
+			
+			/*登录提交*/
+			$("#loginBtn").on("click",function(){
+				var phoneNum = $("#phoneNum").val();//电话号码
+				var checkedNum = $("#checkedNum").val();//验证码
+				if(checkedNum==''){
+					Global.tool.toast("请输入验证码");
+				}else{
+					/*todo 数据提交*/
+					$.ajax({
+					    "url": "/client/customer/login",
+                        "type": "POST",
+                        "dataType":"json",
+                        "data": {
+                            "userName": phoneNum,
+                            "pwd":checkedNum
+                        },
+                        success:function(data){
+                            console.log(data)
+                        },
+                        error:function(e){
+                            console.log(e)
+                        }
+					})
+					
+				}
+			})
+			
+		})
+		
+	</script>
+</html>
