@@ -4,3 +4,6 @@
 .idea/workspace.xml
 .idea/webpack-react.iml
 .project
+dist
+node_modules
+node_modules
