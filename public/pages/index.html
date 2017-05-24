@@ -20,12 +20,29 @@
     .active {
       color: green;
     }
+    #footer{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    #slider>.group{
+      margin: 0;
+      padding: 0;
+    }
+    .group-body{
+     padding: 0;
+    }
+
   </style>
 </head>
 <body>
+  <div id="slider">
+
+  </div>
   <div id="container">
   </div>
   <!-- app.js 为上面的代码编译打包后的文件 -->
+  <footer id="footer"></footer>
   <script src="../js/pagebundle.js"></script>
 </body>
 </html>
