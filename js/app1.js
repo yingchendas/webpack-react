@@ -1,3 +1,6 @@
+/**
+ * Created by root on 2017/6/12.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Publisher from './components/publisher/footer.jsx';

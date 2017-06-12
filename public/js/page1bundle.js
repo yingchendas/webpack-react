@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 306);
+/******/ 	return __webpack_require__(__webpack_require__.s = 307);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -37194,7 +37194,8 @@ exports.stringify = function (obj, opts) {
 };
 
 /***/ }),
-/* 306 */
+/* 306 */,
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37226,6 +37227,9 @@ var _modal2 = _interopRequireDefault(_modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * Created by root on 2017/6/12.
+ */
 _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('footer'));
 _reactDom2.default.render(_react2.default.createElement(_pic2.default, null), document.getElementById('slider'));
 _reactDom2.default.render(_react2.default.createElement(_modal2.default, null), document.getElementById('container'));
