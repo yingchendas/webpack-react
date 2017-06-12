@@ -77,7 +77,7 @@ module.exports = function (grunt) {
 
     grunt.option('force', true);
     grunt.registerTask('default', ['concurrent']);
-    grunt.registerTask('build', ['clean', 'uglify', 'copy', 'zip']);
+    grunt.registerTask('build', ['clean', 'copy', 'zip']);
     // grunt.registerTask('build', ['clean', 'buildJade', 'uglify']);
     // grunt.registerTask('build', ['buildJade']);
     grunt.registerTask('clear', ['clean']);
