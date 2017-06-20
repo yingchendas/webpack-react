@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        page:'./src/app.js',
-        page1:'./src/app1.js'
+        page:'./components/index/app.js',
+        register:'./components/register/register_app.js'
     },
     output: {
         path: __dirname,

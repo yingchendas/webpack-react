@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Publisher from './components/publisher/footer.jsx';
-import Slider from './components/publisher/pic';
-import Tres from './components/publisher/index';
-import Modal from './components/publisher/modal';
+import Publisher from '../common/footer.jsx';
+import Slider from '../common/pic';
+import Modal from '../common/modal';
 
 ReactDOM.render(
     <Publisher />,

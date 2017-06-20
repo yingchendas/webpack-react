@@ -79,15 +79,15 @@
 		        <div class="weui_cell">
 		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/userImg.png"/></label></div>
 		            <div class="weui_cell_bd weui_cell_primary pr">
-		                <input class="weui_input c_999" id="phoneNum" type="number"   placeholder="请输入手机号"/>
-		                 <button  class="get_btn get pa">获取验证码</button>
-		                  <span class="get_btn btn_cover pa"></span>
+		                <input class="weui_input c_999" id="phoneNum" type="text"   placeholder="请输入用户名"/>
+		                 <!--<button  class="get_btn get pa">获取验证码</button>-->
+		                  <!--<span class="get_btn btn_cover pa"></span>-->
 		            </div>
 		        </div>
 		        <div class="weui_cell">
 		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/key.png"/></label></div>
 		            <div class="weui_cell_bd weui_cell_primary pr">
-		                <input class="weui_input c_999" type="number" id="checkedNum"  placeholder="请输入验证码"/>
+		                <input class="weui_input c_999" type="password" id="checkedNum"  placeholder="请输入密码"/>
 		               
 		            </div>
 		        </div>
@@ -98,18 +98,18 @@
     		</div>
     		
 		</div>
-		 <div class="c_666 tc f14 bg_f" style="padding-bottom: 1rem;">
-		    <div class="tc clearfix" style="width: ;">
-		        <span class="line fl" style="margin-left: 25%;"></span>
-		        <span class="fl f16" style="margin: 0 1%;">温馨提示</span>
-		        <sapn class="line fl"></sapn>
-		    </div>
-		    <p class="f16">未注册汇保保的用户，验证成功后自动注册</p>
-		    <div style="margin-top: 15px;">
-		    	<img src="../images/wxEwm.png" alt="" />
-		    	<p>微信号关注公众号【汇保保】，购车险，更快捷，更方便。</p>
-		    </div>
-		 </div>
+		 <!--<div class="c_666 tc f14 bg_f" style="padding-bottom: 1rem;">-->
+		    <!--<div class="tc clearfix" style="width: ;">-->
+		        <!--<span class="line fl" style="margin-left: 25%;"></span>-->
+		        <!--<span class="fl f16" style="margin: 0 1%;">温馨提示</span>-->
+		        <!--<sapn class="line fl"></sapn>-->
+		    <!--</div>-->
+		    <!--<p class="f16">未注册汇保保的用户，验证成功后自动注册</p>-->
+		    <!--<div style="margin-top: 15px;">-->
+		    	<!--<img src="../images/wxEwm.png" alt="" />-->
+		    	<!--<p>微信号关注公众号【汇保保】，购车险，更快捷，更方便。</p>-->
+		    <!--</div>-->
+		 <!--</div>-->
 	</body>
 	<script type="text/javascript" src="../js/lib/jquery-1.7.min.js"></script>
 	<script type="text/javascript" src="../js/lib/global.js"></script>
@@ -150,7 +150,7 @@
 				var phoneNum = $("#phoneNum").val();//电话号码
 				var checkedNum = $("#checkedNum").val();//验证码
 				if(checkedNum==''){
-					Global.tool.toast("请输入验证码");
+					Global.tool.toast("请输入密码");
 				}else{
 					/*todo 数据提交*/
 					$.ajax({
