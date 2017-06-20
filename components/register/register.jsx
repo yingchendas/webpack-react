@@ -106,7 +106,7 @@ const register =React.createClass({
                 </ul>
                 <Modal
                     title={this.state.title}
-                    role="confirm"
+                    role="alert"
                     isOpen={this.state.isModalOpen}
                     onDismiss={this.closeModal.bind(this)}
                     >
