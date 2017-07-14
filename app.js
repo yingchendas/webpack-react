@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
 })
 
 app.all('/', (req, res) => {
-    res.redirect('/manager/login');
+    res.redirect('/pages/login.html');
 });
 
 app.use(function (req, res, next) {

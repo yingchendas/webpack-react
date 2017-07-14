@@ -3,8 +3,10 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Slider from '../common/pic';
 import {
     Container,
+    View,
     Group,
     Button,
     ButtonGroup,
@@ -83,37 +85,45 @@ const register =React.createClass({
     },
     render(){
         return(
-            <div className="publisher">
-                <div>
-                    <label htmlFor="userName">用户名:</label>
-                    <input type="text" id="userName" placeholder="请输入用户名"/>
-                </div>
-                <div>
-                    <label htmlFor="userName">选择</label>
-                    <input type="checkbox" checked={this.state.bool} onChange={this.handChange} />
-                </div>
-                <div>
-                    <label htmlFor="pwd">登录密码:</label>
-                    <input type="password" id="pwd" placeholder="请输入登录密码"/>
-                </div>
-                <button className="success234" onClick={this.handclick}>注册</button>
-                <ul id="tset" style={{display:this.state.bool?"block":"none"}}>
-                    {
-                        this.state.arr.map(function (name) {
-                            return (<li>Hello, {name.name}!</li>)
-                        })
-                    }
-                </ul>
-                <Modal
-                    title={this.state.title}
-                    role="alert"
-                    isOpen={this.state.isModalOpen}
-                    onDismiss={this.closeModal.bind(this)}
-                    >
-                    {this.state.value}
-                </Modal>
+            <Container fill="true" direction="column" >
+               <View>
+                    <Container scrollable>
+                        <div className="publisher">
+                            <div>
+                                <label htmlFor="userName">用户名:</label>
+                                <input type="text" id="userName" placeholder="请输入用户名"/>
+                            </div>
+                            <div>
+                                <label htmlFor="userName">选择</label>
+                                <input type="checkbox" checked={this.state.bool} onChange={this.handChange} />
+                            </div>
+                            <div>
+                                <label htmlFor="pwd">登录密码:</label>
+                                <input type="password" id="pwd" placeholder="请输入登录密码"/>
+                            </div>
+                            <button className="success234" onClick={this.handclick.bind(this)}>注册</button>
+                            <ul id="tset" style={{display:this.state.bool?"block":"none"}}>
+                                {
+                                    this.state.arr.map(function (name) {
+                                        return (<li>Hello, {name.name}!</li>)
+                                    })
+                                }
+                            </ul>
+                            <Slider name={this.state.arr}></Slider>
+                            <p>w1212</p>
+                            <Modal
+                                title={this.state.title}
+                                role="alert"
+                                isOpen={this.state.isModalOpen}
+                                onDismiss={this.closeModal.bind(this)}
+                                >
+                                {this.state.value}
+                            </Modal>
 
-            </div>
+                        </div>
+                    </Container>
+                </View>
+            </Container>
 
         );
 

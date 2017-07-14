@@ -36,6 +36,13 @@ const sliderIntance = (
 );
 
 const SliderExample = React.createClass({
+    getInitialState:function(){
+        return {
+            name:'star',bool:false,
+            arr:[{name:"cy23",age:13},{name:"qwe13",age:15}],
+            isModalOpen: false
+        }
+    },
      handleSaveClicked(){
        // alert(111)
     },
@@ -44,6 +51,13 @@ const SliderExample = React.createClass({
             <Group>
                 {sliderIntance}
                 <input className ='btn btn-save'onBlur={this.handleSaveClicked} type="text"/>
+                <ul id="tset">
+                    {
+                        this.props.name.map(function (name) {
+                            return (<li>Hello, {name.name}!</li>)
+                        })
+                    }
+                </ul>
             </Group>
 
         );

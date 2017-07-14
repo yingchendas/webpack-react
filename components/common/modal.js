@@ -33,7 +33,7 @@ const ModalExample = React.createClass({
     },
 
     onOpen() {
-        console.log('modal open....');
+        console.log('modal open1');
     },
 
     onClosed() {
@@ -135,7 +135,7 @@ const LoginModal = React.createClass({
 
     render() {
         return (
-            <Group
+            <Container scrollable
                 header="Login Modal"
             >
                 <Button
@@ -187,7 +187,7 @@ const LoginModal = React.createClass({
                         </Button>
                     </ButtonGroup>
                 </Modal>
-            </Group>
+            </Container>
         );
     }
 });
@@ -195,7 +195,7 @@ const LoginModal = React.createClass({
 const ModalExamples = React.createClass({
     render() {
         return (
-            <Container {...this.props}>
+            <Container {...this.props} scrollable>
                 <Group
                     header="默认 Modal"
                 >
