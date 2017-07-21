@@ -4,7 +4,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 		<title>登录</title>
-		<link rel="stylesheet" href="../css/weui.min.css"/>
+
+		<link rel="stylesheet" href="https://npmcdn.com/amazeui-touch@1.0.0-beta.3/dist/amazeui.touch.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/common/common.css"/>
 		<style type="text/css">
 		    *{
@@ -65,114 +66,26 @@
 			    background: #1EA7F8;
 			    margin-top: 13px;
 			}
+			#loginBtn{
+				display: inline-block;
+				color: #fff;
+				border-radius: 10px;
+				width: 90%;margin-top: 20px;padding: 1rem;box-shadow: 2px 2px 3px #CECECE;
+			}
+			.tc{
+				width: 100%;
+			}
 			.container{
 			    padding-bottom: 1.3rem;
 			}
 		</style>
 	</head>
 	<body class="bg_f">
-		<div class="container bg_f">
-		    <div>
-                <img src="../images/loginBanner.png" width="100%" alt="" />
-            </div>  
-			<div class="weui_cells weui_cells_form">
-		        <div class="weui_cell">
-		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/userImg.png"/></label></div>
-		            <div class="weui_cell_bd weui_cell_primary pr">
-		                <input class="weui_input c_999" id="phoneNum" type="text"   placeholder="请输入用户名"/>
-		                 <!--<button  class="get_btn get pa">获取验证码</button>-->
-		                  <!--<span class="get_btn btn_cover pa"></span>-->
-		            </div>
-		        </div>
-		        <div class="weui_cell">
-		            <div class="weui_cell_hd"><label class="weui_label c_04b"><img src="../images/key.png"/></label></div>
-		            <div class="weui_cell_bd weui_cell_primary pr">
-		                <input class="weui_input c_999" type="password" id="checkedNum"  placeholder="请输入密码"/>
-		               
-		            </div>
-		        </div>
-		    </div>
-		   
-		    <div class="tc">
-    			<a href="javascript:void(0)" id="loginBtn" class="weui_btn bg_1ea" style="width: 90%;margin-top: 20px;padding: .5rem;box-shadow: 2px 2px 3px #CECECE;">登录</a>
-    		</div>
+		<div class="container bg_f" id="container">
     		
 		</div>
-		 <!--<div class="c_666 tc f14 bg_f" style="padding-bottom: 1rem;">-->
-		    <!--<div class="tc clearfix" style="width: ;">-->
-		        <!--<span class="line fl" style="margin-left: 25%;"></span>-->
-		        <!--<span class="fl f16" style="margin: 0 1%;">温馨提示</span>-->
-		        <!--<sapn class="line fl"></sapn>-->
-		    <!--</div>-->
-		    <!--<p class="f16">未注册汇保保的用户，验证成功后自动注册</p>-->
-		    <!--<div style="margin-top: 15px;">-->
-		    	<!--<img src="../images/wxEwm.png" alt="" />-->
-		    	<!--<p>微信号关注公众号【汇保保】，购车险，更快捷，更方便。</p>-->
-		    <!--</div>-->
-		 <!--</div>-->
 	</body>
 	<script type="text/javascript" src="../js/lib/jquery-1.7.min.js"></script>
 	<script type="text/javascript" src="../js/lib/global.js"></script>
-	<script>
-	 /* 
-		   * settime:2016.8.25
-		   author:chenying
-		   describe:经销商申请
-		   */
-		$(function(){
-			/*获取验证码*/
-			$(".get").on("click",function(){
-				var phoneNum = $("#phoneNum").val();
-				var timer =null;
-				var item = $(this);
-				if(Global.tool.checkedPhone(phoneNum)){
-					var i=20;
-					$(".btn_cover").css("display","block");
-					item.text(""+i+"s");
-					timer=setInterval(function(){
-						
-						i--;
-						item.text(""+i+"s");
-						if(i==0){
-							clearInterval(timer);
-							item.text("获取验证码");
-							$(".btn_cover").css("display","none");
-							i=20;
-						}
-					},1000);
-					/*todo数据请求*/
-					
-				}
-			})
-			
-			/*登录提交*/
-			$("#loginBtn").on("click",function(){
-				var phoneNum = $("#phoneNum").val();//电话号码
-				var checkedNum = $("#checkedNum").val();//验证码
-				if(checkedNum==''){
-					Global.tool.toast("请输入密码");
-				}else{
-					/*todo 数据提交*/
-					$.ajax({
-					    "url": "/client/customer/login",
-                        "type": "POST",
-                        "dataType":"json",
-                        "data": {
-                            "userName": phoneNum,
-                            "pwd":checkedNum
-                        },
-                        success:function(data){
-                            console.log(data)
-                        },
-                        error:function(e){
-                            console.log(e)
-                        }
-					})
-					
-				}
-			})
-			
-		})
-		
-	</script>
+	<script src="../js/loginbundle.js"></script>
 </html>

@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Publisher from '../common/footer.jsx';
-import Slider from '../common/pic';
-import Modal from '../common/modal';
+import Index from './index.jsx';
 
 ReactDOM.render(
-    <Publisher />,
+    <Publisher selected="index" />,
     document.getElementById('footer')
 );
 ReactDOM.render(
-    <Slider />,
-    document.getElementById('slider')
-);
-ReactDOM.render(
-    <Modal />,
+    <Index />,
     document.getElementById('container')
 );

@@ -1,0 +1,31 @@
+.success234{
+    color: red;
+}
+.publisher{
+    margin-top: 10px;
+}
+.group-body{
+    padding: 0;
+}
+.group{
+    margin: 0;
+}
+.registerBtn{
+    padding: .5rem 0;
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    background: #ff7f00;
+    box-shadow: 5px 5px 5px #ececec;
+    font-size:1.5rem;
+    color: #fff;
+}
+.tc{
+    width: 100%;
+    text-align: center;
+}
+label{
+    padding-left: .5rem;
+}
+

@@ -13,8 +13,15 @@ import {
 
 const TabBarDemo = React.createClass({
     getInitialState() {
+        var selectName
+        switch (this.props.selected){
+            case "index": selectName='home';break;
+            case 'person':selectName='person';break;
+            case 'gear' :selectName='gear';break;
+            default: selectName='home';
+        }
         return {
-            selected: 'home'
+            selected: selectName
         };
     },
 

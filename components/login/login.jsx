@@ -2,7 +2,7 @@
  * Created by root on 2017/6/19.
  */
 import React from 'react';
-import './Register.css'
+import './login.css'
 import ReactDOM from 'react-dom';
 import Slider from '../common/pic';
 import {
@@ -45,8 +45,8 @@ const register =React.createClass({
 
     },
     handclick:function (){
-        var userName = $("#userName").val();
-        var pwd = $("#pwd").val();
+        let userName = $("#userName").val();
+        let pwd = $("#pwd").val();
        if(userName==''){
            this.setState({
                isModalOpen:true,
@@ -62,23 +62,33 @@ const register =React.createClass({
            })
            //Global.tool.toast("请输入登录密码")
        }else {
+           let item =this
            /*todo 数据提交*/
            $.ajax({
-               "url": "/client/customer/register",
+               "url": "/client/customer/login",
                "type": "POST",
                "dataType":"json",
                "data": {
-                   "userName": userName,
+                   "userName":userName,
                    "pwd":pwd
                },
                success:function(data){
-                   window.location.href='login.html';
+                   if(data.code==10000){
+                       window.location.href='index.html'
+                   }else{
+                       item.setState({
+                           isModalOpen:true,
+                           title:'温馨提示',
+                           value:data.message
+                       })
+                   }
+
                },
                error:function(e){
                    this.setState({
                        isModalOpen:true,
                        title:'温馨提示',
-                       value:'注册失败'
+                       value:'密码或用户名错误'
                    })
                }
            })
@@ -91,16 +101,19 @@ const register =React.createClass({
                     <Container scrollable>
                         <Slider img={this.state.arr}></Slider>
                         <div className="publisher">
-                            <div>
-                                <label htmlFor="userName">用户名:</label>
-                                <input type="text" id="userName" placeholder="请输入用户名"/>
+                            <div className="weui_cells weui_cells_form">
+                                <div>
+                                    <label htmlFor="userName">用户名:</label>
+                                    <input type="text" id="userName" placeholder="请输入用户名"/>
+                                </div>
+                                <div>
+                                    <label htmlFor="pwd">登录密码:</label>
+                                    <input type="password" id="pwd" placeholder="请输入登录密码"/>
+                                </div>
                             </div>
-                            <div>
-                                <label htmlFor="pwd">登录密码:</label>
-                                <input type="password" id="pwd" placeholder="请输入登录密码"/>
-                            </div>
+
                             <div className="tc">
-                                <button className="registerBtn" onClick={this.handclick.bind(this)}>注册</button>
+                                <a href="javascript:void(0)" id="loginBtn" className="weui_btn bg_1ea" onClick={this.handclick.bind(this)}>登录</a>
                             </div>
 
                             <Modal

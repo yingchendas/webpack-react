@@ -2,16 +2,14 @@
  * Created by root on 2017/6/19.
  */
 import React from 'react';
-import './Register.css'
-import ReactDOM from 'react-dom';
 import Slider from '../common/pic';
+import Modal from '../common/modal';
 import {
     Container,
     View,
     Group,
     Button,
     ButtonGroup,
-    Modal,
     Field,
     List,
     Icon,
@@ -25,7 +23,7 @@ const register =React.createClass({
                 {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-2.jpg"},
                 {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-3.jpg"},
                 {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-4.jpg"}
-            ],
+                ],
             isModalOpen: false
         }
     },
@@ -42,6 +40,15 @@ const register =React.createClass({
     },
     handChange:function (event) {
         this.setState({bool:event.target.checked});
+        if(event.target.checked){
+            this.setState({
+                arr:[{name:"cy23",age:13},{name:"qwe13",age:15}]
+            })
+        }else {
+            this.setState({
+                arr:[{name:"cy",age:13},{name:"qwe",age:15}]
+            })
+        }
 
     },
     handclick:function (){
@@ -86,36 +93,10 @@ const register =React.createClass({
     },
     render(){
         return(
-            <Container fill="true" direction="column" >
                <View>
-                    <Container scrollable>
-                        <Slider img={this.state.arr}></Slider>
-                        <div className="publisher">
-                            <div>
-                                <label htmlFor="userName">用户名:</label>
-                                <input type="text" id="userName" placeholder="请输入用户名"/>
-                            </div>
-                            <div>
-                                <label htmlFor="pwd">登录密码:</label>
-                                <input type="password" id="pwd" placeholder="请输入登录密码"/>
-                            </div>
-                            <div className="tc">
-                                <button className="registerBtn" onClick={this.handclick.bind(this)}>注册</button>
-                            </div>
-
-                            <Modal
-                                title={this.state.title}
-                                role="alert"
-                                isOpen={this.state.isModalOpen}
-                                onDismiss={this.closeModal.bind(this)}
-                                >
-                                {this.state.value}
-                            </Modal>
-
-                        </div>
-                    </Container>
+                    <Slider img={this.state.arr}></Slider>
+                    <Modal></Modal>
                 </View>
-            </Container>
 
         );
 
