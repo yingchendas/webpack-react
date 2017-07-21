@@ -7,13 +7,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from '../common/pic';
-import Register from './login.jsx';
+import Login from './login.jsx';
 
 ReactDOM.render(
-    <Register />,
+    <Login />,
     document.getElementById('container')
 );
-// ReactDOM.render(
-//     <Slider />,
-//     document.getElementById('test2')
-// );

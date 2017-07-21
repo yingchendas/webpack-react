@@ -16,15 +16,15 @@ import {
     List,
     Icon,
 } from 'amazeui-touch';
-const register =React.createClass({
+const login =React.createClass({
     getInitialState:function(){
         return {
             name:'star',bool:false,
             arr: [
-                {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-1.jpg"},
-                {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-2.jpg"},
-                {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-3.jpg"},
-                {href:"login.html",src:"http://s.amazeui.org/media/i/demos/bing-4.jpg"}
+                {href:"login.html",src:"/images/banner1.png"},
+                {href:"login.html",src:"/images/banner1.png"},
+                {href:"login.html",src:"/images/banner1.png"},
+                {href:"login.html",src:"/images/banner1.png"}
             ],
             isModalOpen: false
         }
@@ -135,4 +135,4 @@ const register =React.createClass({
     }
 })
 
-export default  register;
+export default  login;
