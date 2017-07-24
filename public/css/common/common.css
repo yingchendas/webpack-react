@@ -560,16 +560,6 @@ body {
 	color:#888;
 	/*text-align: center;*/
 }
-#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
-	display:block; float:left;
-	margin-left: 25%;
-	margin-top: 5px;
-	width:30px; height:30px;
-	background:url(../../images/pull-icon@2x.png) 0 0 no-repeat;
-	-webkit-background-size:30px 60px; background-size:30px 60px;
-	-webkit-transition-property:-webkit-transform;
-	-webkit-transition-duration:250ms;	
-}
 #pullDown .pullDownIcon {
 	-webkit-transform:rotate(0deg) translateZ(0);
 }

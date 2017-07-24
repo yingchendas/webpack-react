@@ -1,0 +1,20 @@
+.scroller li {
+    height:60px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    font-size: 14px;
+
+}
+.pullDownLabel img {
+    width: 13px;
+    height: 13px;
+    margin-top: -1px;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+#wrapper ul li img{width:60px; float:left;  margin-left:10px;}
+.game-info{text-align:left; float:left; margin-left:10px; width:210px; overflow:hidden; height:60px;}
+.game-info h1{font-size:16px; margin-bottom:8px;}
+.game-info p:nth-child(2){font-size:12px; color:#B6B6B6;}
+.game-info p:nth-child(3){font-size:12px; color:#9D9D9D;}
+#wrapper ul li button{position:absolute; right:20px; margin-top:10px; background-color:#F8CD0C; border:0; color:#fff; font-family:Microsoft YaHei; padding:5px 14px; border-radius:3px;}

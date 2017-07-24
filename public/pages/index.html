@@ -16,35 +16,22 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="stylesheet" href="https://npmcdn.com/amazeui-touch@1.0.0-beta.3/dist/amazeui.touch.min.css">
+  <link rel="stylesheet" href="../css/pullToRefresh.css">
   <style>
-    *{
-      line-height: 10px;
+    *, :after, :before {
+       box-sizing: content-box;
     }
-    .active {
-      color: green;
-    }
-    #footer{
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    #slider>.group{
-      margin: 0;
-      padding: 0;
-    }
-    .group{
+    *+address, *+blockquote, *+dl, *+fieldset, *+figure, *+hr, *+ol, *+p, *+pre, *+ul{
       margin: 0;
     }
-    .group-body{
-     padding: 0;
-    }
-
   </style>
 </head>
 <body>
   <div id="container">
   </div>
   <footer id="footer"></footer>
+  <script src="../js/lib/iscroll.js"></script>
+  <script src="../js/lib/pullToRefresh.js"></script>
   <script src="../js/pagebundle.js"></script>
 </body>
 </html>

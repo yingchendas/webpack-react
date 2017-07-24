@@ -1,0 +1,62 @@
+.root:before{
+    display: block;
+    content: '';
+    width: 20px;
+    height:100%;
+    background: rgba(111,111,111,0);
+    box-shadow: 2px 2px 32px 2px #999;
+    position: absolute;
+    right:-20px;
+    top:0;
+}
+*{
+    margin: 0;
+    padding:0;
+    font-family: "Microsoft YaHei UI";
+}
+#root{
+    height:45px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding-right: 20px;
+    background-color: #f5f5f5;
+}
+.root:before{
+    display: block;
+    content: '';
+    width: 20px;
+    height:100%;
+    background: rgba(111,111,111,0);
+    box-shadow: 2px 2px 32px 2px #999;
+    position: absolute;
+    right:-20px;
+    top:0;
+}
+.list{
+    position: absolute;
+    left:0;
+    top:0;
+    /*width: 100%;*/ /*不能为100%，不然宽度只有父容器的宽度，我掉进这个坑了。*/
+    transition: all 1s;
+    height:100%;
+    /*line-height: 2.6;*/
+    margin:0 !important;
+}
+.on{
+    color:red;
+    font-weight: bold;
+}
+.off{
+    color: #000;
+    font-weight:normal;
+}
+.list li{
+    display: inline-block;
+    padding:10px 20px;
+    cursor: pointer;
+}

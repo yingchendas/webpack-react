@@ -1,0 +1,21 @@
+.active {
+    color: green;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#slider>.group{
+    margin: 0;
+    padding: 0;
+}
+.slider-slides{
+    height: 100px;
+}
+.group{
+    margin: 0;
+}
+.group-body{
+    padding: 0;
+}
