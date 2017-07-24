@@ -1,3 +1,12 @@
+*, :after, :before {
+    box-sizing: content-box !important;
+}
+*+address, *+blockquote, *+dl, *+fieldset, *+figure, *+hr, *+ol, *+p, *+pre, *+ul{
+    margin: 0 !important;
+}
+#wrapper{
+    height: 71% !important;
+}
 .scroller li {
     height:60px;
     border-bottom: 1px solid #eee;
