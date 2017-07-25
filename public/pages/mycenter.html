@@ -9,6 +9,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 		<title>个人中心</title>
+        <link rel="stylesheet" href="https://npmcdn.com/amazeui-touch@1.0.0-beta.3/dist/amazeui.touch.min.css">
 		<link rel="stylesheet" href="../css/weui.min.css" />
 		<link rel="stylesheet" href="../css/common/common.css" />
 		<style type="text/css">
@@ -38,90 +39,12 @@
 	</head>
 	<body style="background: #f8f8f8;">
 		<!--头部-->
-		<header class="clearfix tl userBox container" style="">
-			<div class="clearfix ">
-				<img class="fl" src="../images/header.png" width="60px" alt="用户头像" />
-				<span class="tc fl userName c_666">用户名</span>
-			</div>
-			
-		</header>
-		<!--列表开始-->
-		<div class="weui_cells weui_cells_access">
-            <a class="weui_cell" href="commission/myWallet.html">
-                <div class="weui_cell_hd"><img src="../images/money.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-                <div class="weui_cell_bd weui_cell_primary pr">
-                    <p>我的钱包</p>
-                    <img src="../images/hot.png" class="pa money" width="30px" alt="" />
-                </div>
-                <div class="weui_cell_ft"></div>
-            </a>
+		<div id="container">
+
         </div>
-        <div class="weui_cells weui_cells_access">
-            <a class="weui_cell" href="policy/policymanager.html">
-                
-                <div class="weui_cell_hd"><img src="../images/policy.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-                <div class="weui_cell_bd weui_cell_primary pr">
-                    <p>我的保单</p>
-                </div>
-                <div class="weui_cell_ft"></div>
-            </a>
-            <a class="weui_cell"  href="addressmanager/addressmanager.html">
-                
-                <div class="weui_cell_hd"><img src="../images/addr.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-                <div class="weui_cell_bd weui_cell_primary pr">
-                    <p>地址管理</p>
-                </div>
-                <div class="weui_cell_ft"></div>
-            </a>
-            <a class="weui_cell" href="pwdmanager/pwdmanager.html">
-                
-                <div class="weui_cell_hd"><img src="../images/pwd.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-                <div class="weui_cell_bd weui_cell_primary pr">
-                    <p>密码管理</p>
-                </div>
-                <div class="weui_cell_ft"></div>
-            </a>
-        </div>
-		
-		<div class="weui_cells weui_cells_access">
-			<a class="weui_cell" href="apply/apply.html">
-			    <div class="weui_cell_hd"><img src="../images/store.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-				<div class="weui_cell_bd weui_cell_primary">
-					<p>经销商申请</p>
-				</div>
-				<div class="weui_cell_ft"></div>
-			</a>
-		</div>
-		
-		<footer class="weui_tab" style="position: fixed;bottom: 0;width: 100%;z-index: 999;height: 50px;">
-            
-            <div class="weui_tabbar bg_f ce ">
-                <a href="more.html" class="weui_tabbar_item ">
-                    <div class="weui_tabbar_icon pr" >
-                        <img src="../images/service1.png" width="40px"/>
-                    </div>
-                    <p class="weui_tabbar_label">更多</p>
-                </a>
-                <a href="takephoto.html" class="weui_tabbar_item  oneKey">
-                    <div style="width: 100px; margin: 0 auto;" class="pr">
-                        <div style="z-index: 10000;width: 90px;height: 90px;border-radius: 50%;top: -26px;left: 15px;" alt="" class="pa tc bg_f"  >
-                           <img src="../images/index1.png" class="pa" width="50px"  style="width: 40px;top: 20px;left: 25px;" /> 
-                        </div>
-                        
-                        <p class="weui_tabbar_label f14 pa " style="top: 28px;font-size: 13px;left: 30px;z-index: 10000;">一键报价</p>
-                    </div>
-                    
-                    
-                </a>
-                <a href="javascript:void(0)" class="weui_tabbar_item" >
-                    <div class="weui_tabbar_icon pr">
-                        <img src="../images/center1.png" width="40px" alt="" />
-                    </div>
-                    <p class="weui_tabbar_label tc c_1ea">我的</p>
-                </a>
-            </div>
-        </footer>
+		<div id="footer"></div>
 	</body>
 	<script src="../js/lib/jquery-1.7.min.js"></script>
 	<script type="text/javascript" src="../js/lib/global.js"></script>
+    <script src="../js/mycenterbundle.js"></script>
 </html>

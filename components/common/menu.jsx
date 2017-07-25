@@ -12,25 +12,67 @@ var timer = null;
 var isdrag=false;
 var tx,x;
 var totalWidth = 0;
-function movemouse(e){
-    console.log(totalWidth)
-    if (isdrag){
-        var n = tx + e.touches[0].pageX - x;
-        if(n>=0||n<=-(totalWidth-380)){
-            return false
+function move(x) {
+    var left=$("#list").offset().left;
+    var left=$("#list").offset().left;
+    if(x>0){
+        if(left+x+500>0){
+            $("#list").css("left",0);
+            return false;
+        }else if(left+x+100<-1810){
+            $("#list").css("left",-(totalWidth-200))
+            return false;
         }
-        $("#list").css("left",n);
-        return false;
+        $("#list").css("left",left+x+500);
+    }else{
+        if(left+x-500>0){
+            $("#list").css("left",0);
+            return false;
+        }else if(left+x-100<-1810){
+            $("#list").css("left",-(totalWidth-200))
+            return false;
+        }
+        $("#list").css("left",left+x-500);
     }
-}
 
-function selectmouse(e){
-    isdrag = true;
-    tx = parseInt(document.getElementById("list").style.left+0);
-    x = e.touches[0].pageX;
-    return false;
+
 }
 $(function () {
+    mui.init({
+        gestureConfig:{
+            tap: true, //默认为true
+            doubletap: true, //默认为false
+            longtap: true, //默认为false
+            swipe: true, //默认为true
+            drag: true, //默认为true
+            hold:true,//默认为false，不监听
+            release:false//默认为false，不监听
+        }
+    });
+    document.getElementById("list").addEventListener("dragend",function(e){
+        var x =e.detail.deltaX;
+        var left=$("#list").offset().left;
+        if(left+x-100>0){
+            $("#list").css("left",0);
+        }else if(left+x-100<-1810){
+            $("#list").css("left",-(totalWidth-200))
+        }
+
+    });
+    document.getElementById("list").addEventListener("drag",function(e){
+        var x =e.detail.deltaX;
+        move(x)
+
+    });
+    document.getElementById("list").addEventListener("swipeleft",function(e){
+        var x =e.detail.deltaX;
+        move(x)
+
+    });
+    document.getElementById("list").addEventListener("swiperight",function(e){
+        var x =e.detail.deltaX;
+        move(x)
+    });
     var box = document.getElementById('root'); //外面的容器。
     var listBox = document.getElementById('list'); //ul列表。主要是移动它的left值
     var list = $('.list').find("li");//所有列表元素
@@ -48,12 +90,12 @@ $(function () {
             list[i].className = 'on';   //给点击的元素添加样式
             var offset =totalWidth - (Math.abs(listBox.offsetLeft) + box.clientWidth) + 100; //右边的偏移量 = 所有元素宽度之和 - （ul容器的左偏移量 + 父容器的宽度）
             if(e.pageX > width && offset > 0){  //点击右侧并且右侧的偏移量大于0，左滑。
-                listBox.style.left = (listBox.offsetLeft-200) + 'px';
-            }else if(e.pageX > width && offset > 200){ //临界位置，，右侧滚动到末尾
+                listBox.style.left = (listBox.offsetLeft-list[i].offsetWidth) + 'px';
+            }else if(e.pageX > width && offset > list[i].offsetWidth){ //临界位置，，右侧滚动到末尾
                 listBox.style.left = -_offset + 'px';
             }
-            if(e.pageX < width && listBox.offsetLeft < -200) { //点击左侧并且左侧的偏移量小于0，左滑。
-                listBox.style.left = (listBox.offsetLeft + 200) + 'px';
+            if(e.pageX < width && listBox.offsetLeft < -list[i].offsetWidth) { //点击左侧并且左侧的偏移量小于0，左滑。
+                listBox.style.left = (listBox.offsetLeft + list[i].offsetWidth) + 'px';
 
             }else if(e.pageX < width && listBox.offsetLeft < 0){ //临界位置，左侧滚到开始的位置
                 listBox.style.left = 0
@@ -62,14 +104,6 @@ $(function () {
         });
 
     }
-
-
-    //拖拽
-    document.getElementById("list").addEventListener('touchend',function(){
-        isdrag = false;
-    });
-    document.getElementById("list").addEventListener('touchstart',selectmouse);
-    document.getElementById("list").addEventListener('touchmove',movemouse);
 });
 const Menu = React.createClass({
     getInitialState(){

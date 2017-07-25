@@ -48,8 +48,9 @@
     margin:0 !important;
 }
 .on{
-    color:red;
-    font-weight: bold;
+    color:#F59DBE !important;
+    font-size: 17px;
+    transition: all .5s;
 }
 .off{
     color: #000;

@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-    Link,
-} from 'react-router';
-import {
-    Container,
-    Group,
-    TabBar,
-    Icon,
-    Badge,
-    amStyles,
-} from 'amazeui-touch';
-
+import './footer.css'
 const TabBarDemo = React.createClass({
     getInitialState() {
         var selectName
@@ -26,45 +15,31 @@ const TabBarDemo = React.createClass({
     },
 
     handleClick(key, e) {
-        e.preventDefault();
 
-        this.setState({
-            selected: key
-        }, function() {
-            console.log('选中了： %s', this.state.selected);
-            if(this.state.selected=='person'){
-                window.location.href='mycenter.html'
-            }
-        });
     },
 
     render() {
         return (
-            <TabBar
-                amStyle="Warning"
-                onAction={this.handleClick}
-            >
-                <TabBar.Item
-                    eventKey="home"
-                    selected={this.state.selected === 'home'}
-                    icon="home"
-                    title="首页"
-                />
-                <TabBar.Item
-                    component={Link}
-                    selected={this.state.selected === 'person'}
-                    eventKey="person"
-                    icon="person"
-                    title="个人中心"
-                    to="/"
-                />
-                <TabBar.Item
-                    selected={this.state.selected === 'gear'}
-                    eventKey="gear"
-                    icon="gear"
-                    title="设置"
-                />
-            </TabBar>
+            <footer className="_bar">
+                <a href="index.html" className={this.state.selected=="home"?"onActive":''}>
+                    <p className="iconfont icon-icon-test1 f2m "></p>
+                    <p>首页</p>
+                </a>
+                <a href="">
+                    <p className=" f2m icon-icon-test4 iconfont"></p>
+                    <p>发现</p>
+                </a>
+
+                <a href="mycenter.html"  className={this.state.selected=="person"?"onActive":''}>
+                    <p className="iconfont icon-icon-test12 f2m"></p>
+                    <p>个人中心</p>
+                </a>
+                <a href="">
+                    <p className="iconfont icon-icon-test14 f2m"></p>
+                    <p>设置</p>
+                </a>
+
+            </footer>
         )
     }
 });

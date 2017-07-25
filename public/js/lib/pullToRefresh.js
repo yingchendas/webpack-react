@@ -1,10 +1,3 @@
-/*!
- * pull to refresh v3.0
- *author:wallace
- *2015-10-15
- *qq447363121
- *陈国华
- */
 var refresher = {
 	info: {
 		"pullDownLable": "下拉刷新",

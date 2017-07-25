@@ -2,6 +2,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         page:'./components/index/app.js',
+        mycenter:'./components/mycenter/mycenter_app.js',
         // register:'./components/register/register_app.js',
         // login:'./components/login/login_app.js'
     },

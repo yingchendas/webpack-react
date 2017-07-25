@@ -30,7 +30,7 @@ $(function () {
         setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
             var el, li, i;
             el =document.querySelector("#wrapper ul");
-            for (i=0; i<2; i++) {
+            for (i=0; i<10; i++) {
                 li = document.createElement('li');
                 li.innerHTML="<img src='/images/game/game8.png'><div class='game-info'><h1>华仔超神战记</h1><p>9万次下载     89.18M</p><p>秒杀虚拟摇杆，砸烂手机键盘</p></div><button>下载</button>"
                 el.appendChild(li, el.childNodes[0]);
