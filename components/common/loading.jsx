@@ -38,7 +38,6 @@ const Loading = React.createClass({
         return (
             <div id="_loadingContainer">
                 <div className="loadingBox" style={{"background-position-y":-this.state.positionY*50+"px"}} >
-
                 </div>
             </div>
         )
