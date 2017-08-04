@@ -98,7 +98,6 @@ const Iscroll = React.createClass({
     render(){
         return(
             <div>
-                <Slider img={this.state.arr1}></Slider>
                 <div id="wrapper">
                     <ul>
                         {

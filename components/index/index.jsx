@@ -6,10 +6,6 @@ import '../../public/css/common/common.css';
 import './index.css';
 import Menu from '../common/menu.jsx';
 import Myloading from '../common/loading.jsx';
-import {
-    Container,
-    View,
-} from 'amazeui-touch';
 const register =React.createClass({
     getInitialState:function(){
         return {
@@ -31,14 +27,12 @@ const register =React.createClass({
     },
     render(){
         return(
-            <Container fill="true" direction="column" >
-                <View>
-                    <Container scrollable>
-                        <Menu></Menu>
-                        <Myloading openLoading={this.state.openLoading}></Myloading>
-                    </Container>
-                </View>
-            </Container>
+           <div>
+               <Menu></Menu>
+               <Myloading openLoading={this.state.openLoading}></Myloading>
+           </div>
+
+
 
         );
 

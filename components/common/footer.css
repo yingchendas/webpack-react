@@ -19,7 +19,7 @@
 ._bar>a{
     text-decoration: none;
     display: inline-block;
-    padding:15px !important;
+    padding:5px !important;
     flex: 1;
     color: #888;
 }
@@ -29,7 +29,7 @@
 ._bar>a p{
 
     font-size: 12px;
-    line-height: 3px;
+    line-height: 16px !important;
     text-overflow: ellipsis;
     white-space: nowrap;
 }

@@ -22,20 +22,20 @@ const TabBarDemo = React.createClass({
         return (
             <footer className="_bar">
                 <a href="index.html" className={this.state.selected=="home"?"onActive":''}>
-                    <p className="iconfont icon-icon-test1 f2m "></p>
+                    <a className="iconfont icon-icon-test1 f2m "></a>
                     <p>首页</p>
                 </a>
                 <a href="">
-                    <p className=" f2m icon-icon-test4 iconfont"></p>
+                    <a className=" f2m icon-icon-test4 iconfont"></a>
                     <p>发现</p>
                 </a>
 
                 <a href="mycenter.html"  className={this.state.selected=="person"?"onActive":''}>
-                    <p className="iconfont icon-icon-test12 f2m"></p>
+                    <a className="iconfont icon-icon-test12 f2m"></a>
                     <p>个人中心</p>
                 </a>
                 <a href="">
-                    <p className="iconfont icon-icon-test14 f2m"></p>
+                    <a className="iconfont icon-icon-test14 f2m"></a>
                     <p>设置</p>
                 </a>
 

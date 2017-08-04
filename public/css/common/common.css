@@ -63,9 +63,15 @@
 .icon-dong:before { content: "\e6d5"; }
 
 .icon-shishang:before { content: "\e6d7"; }
-
+#container{
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-bottom: 45px;
+}
 body{
 	background: #F8F8F8 !important;
+	line-height: normal !important;
 	}
 /*.container{
 	margin-bottom: 60px;
