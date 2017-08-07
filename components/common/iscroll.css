@@ -19,7 +19,7 @@
     margin-right: 5px;
 }
 #wrapper ul li img{width:60px; float:left;  margin-left:10px;}
-.game-info{text-align:left; float:left; margin-left:10px; width:210px; overflow:hidden; height:60px;}
+.game-info{text-align:left; float:left; margin-left:10px; width:220px; height:70px;overflow: hidden}
 .game-info h1{font-size:16px; margin-bottom:8px;}
 .game-info p:nth-child(2){font-size:12px; color:#B6B6B6;}
 .game-info p:nth-child(3){font-size:12px; color:#9D9D9D;}

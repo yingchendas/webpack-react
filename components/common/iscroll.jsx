@@ -103,15 +103,21 @@ const Iscroll = React.createClass({
                         {
                             this.state.arr.map(function (item) {
                                 return (
-                                    <li className="clearfix">
-                                        <img src={item.src} />
+                                    <li className="clearfix flexBox">
+                                        <div>
+                                            <img src={item.src} />
+                                        </div>
+
                                         <div className="game-info">
 
                                             <h1>{item.gameName}</h1>
                                             <p>3万次下载 147.98M</p>
                                             <p>网易游戏出品,双维度操控，真人真机对战</p>
                                         </div>
-                                        <button>下载</button>
+                                        <div>
+                                            <button>下载</button>
+                                        </div>
+
                                     </li>
                                 )
                             })
