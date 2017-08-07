@@ -11,28 +11,37 @@
 :local .navBox>nav{
     /*flex: 1;*/
 }
-#wrapper{
-    height: 93.5% !important;
-}
 :local ._nav{
     float: left;
     position: fixed;
-    width: 30%;
+    font-size: 12px;
+    width: 20%;
     max-height: 100%;
     overflow: hidden;
     overflow-y: scroll;
-    scrollbar-face-color: #333
+    scrollbar-face-color: #333;
 
 }
+:local ._nav>ul{
+    padding-bottom: 45px;
+}
 :local ._nav>ul>Li{
-    padding: 1rem;
+    padding: 1rem .5rem;
     background: #ececec;
     border-bottom: 1px solid #e3e3e3;
     text-align: center;
 }
+:local ._nav>ul>Li>a{
+    color: #333;
+}
 :local .goodList{
     float: right;
-    width: 70%;
+    width: 80%;
     /*flex: 2;*/
     /*border: 1px solid red;*/
+}
+:local .active{
+    background: #fff !important;
+    color: #FF3300 !important;
+
 }

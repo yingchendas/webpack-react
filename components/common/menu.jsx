@@ -4,7 +4,7 @@
 import React from 'react';
 import './menu.css';
 import '../../public/js/lib/jquery-1.7.min';
-import Iscroll from './iscroll.jsx'
+
 //拖拽
 var leftUnm=0;
 var rightNum = 0;
@@ -142,7 +142,7 @@ const Menu = React.createClass({
                         <li onClick={this.handclick.bind(this)}>全32部菜单</li>
                     </ul>
                 </div>
-                <Iscroll height="86.5%" width="100%"/>
+
             </div>
 
 
