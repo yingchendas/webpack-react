@@ -142,7 +142,7 @@ const Menu = React.createClass({
                         <li onClick={this.handclick.bind(this)}>全32部菜单</li>
                     </ul>
                 </div>
-                <Iscroll/>
+                <Iscroll height="86.5%" width="100%"/>
             </div>
 
 

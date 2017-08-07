@@ -98,7 +98,7 @@ const Iscroll = React.createClass({
     render(){
         return(
             <div>
-                <div id="wrapper">
+                <div id="wrapper" style={{height:this.props.height,width:this.props.width}}>
                     <ul>
                         {
                             this.state.arr.map(function (item) {

@@ -7,6 +7,7 @@ const TabBarDemo = React.createClass({
             case "index": selectName='home';break;
             case 'person':selectName='person';break;
             case 'gear' :selectName='gear';break;
+            case 'search':selectName='search';break;
             default: selectName='home';
         }
         return {
@@ -25,7 +26,7 @@ const TabBarDemo = React.createClass({
                     <a className="iconfont icon-icon-test1 f2m "></a>
                     <p>首页</p>
                 </a>
-                <a href="">
+                <a href="search.html" className={this.state.selected=="search"?"onActive":''}>
                     <a className=" f2m icon-icon-test4 iconfont"></a>
                     <p>发现</p>
                 </a>
@@ -34,10 +35,10 @@ const TabBarDemo = React.createClass({
                     <a className="iconfont icon-icon-test12 f2m"></a>
                     <p>个人中心</p>
                 </a>
-                <a href="">
-                    <a className="iconfont icon-icon-test14 f2m"></a>
-                    <p>设置</p>
-                </a>
+                {/*<a href="">*/}
+                    {/*<a className="iconfont icon-icon-test14 f2m"></a>*/}
+                    {/*<p>设置</p>*/}
+                {/*</a>*/}
 
             </footer>
         )

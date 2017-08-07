@@ -5,6 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "amazeui-touch": "^1.0.0",
+    "antd-mobile": "^1.6.0",
+    "antd-mobile-web": "^1.5.0",
     "babel-core": "^6.11.4",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^7.0.0",
