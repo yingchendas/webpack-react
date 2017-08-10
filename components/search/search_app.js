@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Footer from '../common/footer.jsx';
 import Search from './search.jsx';
+import '../common/rem'
 
 ReactDOM.render(
     <Footer selected="search" />,

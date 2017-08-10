@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
 }
-._bar{
-    height: 45px;
+:local ._bar{
+    height: 2rem;
     position: fixed;
     width: 100%;
     text-align: center;
@@ -13,28 +13,28 @@
     bottom: 0px;
     color: #888;
     padding:0;
-    font-size: 14px !important;
+    font-size: .6rem !important;
     z-index: 9 !important;
 
 }
-._bar>a{
+:local ._bar>a{
     text-decoration: none;
     display: inline-block;
-    padding:5px !important;
+    padding:.2rem !important;
     flex: 1;
     color: #888;
 }
-.iconfont{
-    font-size: 20px !important;
+:local .iconfont{
+    font-size: 1rem !important;
 }
-._bar>a p{
+:local ._bar>a p{
 
-    font-size: 12px;
-    line-height: 16px !important;
+    font-size: .5rem;
+    line-height: .6rem !important;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.onActive{
+:local .onActive{
     color: #F59DBE !important;
 }

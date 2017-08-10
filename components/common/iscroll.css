@@ -5,10 +5,10 @@
     margin: 0 !important;
 }
 .scroller li {
-    height:60px;
+    height:3.2rem;
     border-bottom: 1px solid #eee;
     background-color: #fff;
-    font-size: 14px;
+    font-size: .5rem;
 
 }
 .pullDownLabel img {
@@ -18,9 +18,9 @@
     vertical-align: -2px;
     margin-right: 5px;
 }
-#wrapper ul li img{width:60px; float:left;  margin-left:10px;}
-.game-info{text-align:left; float:left; margin-left:10px; width:220px; height:70px;overflow: hidden}
-.game-info h1{font-size:16px; margin-bottom:8px;}
-.game-info p:nth-child(2){font-size:12px; color:#B6B6B6;}
-.game-info p:nth-child(3){font-size:12px; color:#9D9D9D;}
-#wrapper ul li button{position:absolute; right:20px; margin-top:10px; background-color:#F8CD0C; border:0; color:#fff; font-family:Microsoft YaHei; padding:5px 14px; border-radius:3px;}
+#wrapper ul li img{width:3rem; float:left;  margin-left:.3rem;}
+.game-info{text-align:left; float:left; margin-left:.3rem;width: 9rem; height:2.5rem;}
+.game-info h1{font-size:.6rem; margin-bottom:.2rem;}
+.game-info p:nth-child(2){font-size:.5rem; color:#B6B6B6;}
+.game-info p:nth-child(3){font-size:.5rem; color:#9D9D9D;}
+#wrapper ul li button{position:absolute; right:.6rem;font-size: .4rem; margin-top:.3rem; background-color:#F8CD0C; border:0; color:#fff; font-family:Microsoft YaHei; padding:.2rem .7rem; border-radius:.1rem;}

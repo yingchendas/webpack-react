@@ -2,8 +2,9 @@
  * Created by root on 2017/7/24.
  */
 import React from 'react';
-import './menu.css';
 import '../../public/js/lib/jquery-1.7.min';
+import './menu.css';
+import Iscroll from './iscroll.jsx'
 
 //拖拽
 var leftUnm=0;
@@ -13,26 +14,47 @@ var isdrag=false;
 var tx,x;
 var totalWidth = 0;
 function move(x) {
-    var left=$("#list").offset().left;
-    var left=$("#list").offset().left;
+    var left=Number($("#list").css('left').split("p")[0]);
+    var timer =null;
+    console.log("li="+ $('.list').find("li").eq($('.list').find("li").length-1).offset().left);
+    var wd =  $('.list').find("li").eq($('.list').find("li").length-1).width()
+    var b =$('.list').find("li").eq($('.list').find("li").length-1).offset().left
+    var win =$(window).width();
+    // console.log(win);
+    // console.log(b+wd)
     if(x>0){
-        if(left+x+500>0){
+        console.log(123)
+        if(left+500>0){
             $("#list").css("left",0);
             return false;
-        }else if(left+x+100<-1810){
-            $("#list").css("left",-(totalWidth-200))
-            return false;
         }
-        $("#list").css("left",left+x+500);
+        $("#list").css("left",left+500);
     }else{
-        if(left+x-500>0){
-            $("#list").css("left",0);
-            return false;
-        }else if(left+x-100<-1810){
-            $("#list").css("left",-(totalWidth-200))
-            return false;
-        }
-        $("#list").css("left",left+x-500);
+        // console.log("left="+left)
+        // console.log("totalWidth="+totalWidth)
+        var i=0
+        timer=setInterval(function () {
+            var left=Number($("#list").css('left').split("p")[0]);
+            var b =$('.list').find("li").eq($('.list').find("li").length-1).offset().left
+            i=i+50;
+            if(b+wd-50<=win){
+                console.log(2354678)
+                // $("#list").css("left",-(totalWidth+15))
+                clearInterval(timer);
+                i=0;
+                return false;
+            }else{
+                if(i==300){
+                    i=0;
+                    clearInterval(timer);
+                    return false
+                }
+                $("#list").css("left",left-i);
+            }
+            console.log(b)
+
+        },1)
+
     }
 
 
@@ -49,27 +71,20 @@ $(function () {
             release:false//默认为false，不监听
         }
     });
-    document.getElementById("list").addEventListener("dragend",function(e){
-        var x =e.detail.deltaX;
-        var left=$("#list").offset().left;
-        if(left+x-100>0){
-            $("#list").css("left",0);
-        }else if(left+x-100<-1810){
-            $("#list").css("left",-(totalWidth-200))
-        }
-
-    });
-    document.getElementById("list").addEventListener("drag",function(e){
-        var x =e.detail.deltaX;
-        move(x)
-
-    });
+    // document.getElementById("list").addEventListener("drag",function(e){
+    //     e.stopPropagation()
+    //     var x =e.detail.deltaX;
+    //     move(x)
+    //
+    // });
     document.getElementById("list").addEventListener("swipeleft",function(e){
+        e.stopPropagation()
         var x =e.detail.deltaX;
         move(x)
 
     });
     document.getElementById("list").addEventListener("swiperight",function(e){
+        e.stopPropagation()
         var x =e.detail.deltaX;
         move(x)
     });
@@ -84,12 +99,13 @@ $(function () {
     for(let i=0;i<list.length;i++){
         var _offset = totalWidth - box.clientWidth; //右边的偏移量
         list[i].addEventListener('click', function (e) {
+
             for(let j=0;j<list.length;j++){
                 list[j].className = 'off';  //移除所有元素的样式
             }
             list[i].className = 'on';   //给点击的元素添加样式
             var offset =totalWidth - (Math.abs(listBox.offsetLeft) + box.clientWidth) + 100; //右边的偏移量 = 所有元素宽度之和 - （ul容器的左偏移量 + 父容器的宽度）
-            if(e.pageX > width && offset > 0){  //点击右侧并且右侧的偏移量大于0，左滑。
+            if(e.pageX > width){  //点击右侧并且右侧的偏移量大于0，左滑。
                 listBox.style.left = (listBox.offsetLeft-list[i].offsetWidth) + 'px';
             }else if(e.pageX > width && offset > list[i].offsetWidth){ //临界位置，，右侧滚动到末尾
                 listBox.style.left = -_offset + 'px';
@@ -107,12 +123,100 @@ $(function () {
 });
 const Menu = React.createClass({
     getInitialState(){
-        return (
-            null
-        )
+        var arr=[
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+
+        ]
+        return {
+            arr:arr,
+        }
     },
     handclick(){
-        console.log(111)
+        var arr=[
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下2"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下2"
+            },
+
+        ]
+        this.setState({
+            arr:arr
+        })
     },
     render(){
         return(
@@ -141,10 +245,10 @@ const Menu = React.createClass({
                         <li onClick={this.handclick.bind(this)}>全菜12单</li>
                         <li onClick={this.handclick.bind(this)}>全32部菜单</li>
                     </ul>
+
                 </div>
-
+                <Iscroll arr={this.state.arr}></Iscroll>
             </div>
-
 
         )
     }

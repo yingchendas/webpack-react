@@ -52,6 +52,10 @@
 	-moz-transition-property: -moz-transform;
 	-moz-transition-duration: 250ms;
 }
+.pullUpLabel{
+	position: absolute;
+	padding-left: 40%;
+}
 .pullDown .pullDownIcon {
 	display: none;
 	-webkit-transform: rotate(0deg) translateZ(0);

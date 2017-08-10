@@ -8,8 +8,52 @@ import Iscroll from '../common/iscroll.jsx'
 import Myloading from '../common/loading.jsx';
 const Search=React.createClass({
     componentWillMount:function () {
+        var arr=[
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game1.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game2.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+            {
+                src:"/images/game/game3.png",
+                gameName:"华仔天下1"
+            },
+
+        ]
         this.setState({
             openLoading: true,
+            arr:arr,
             menuList:[
                 {
                     name:"推荐分类",
@@ -106,7 +150,7 @@ const Search=React.createClass({
                         </ul>
                     </nav>
                     <div className={style.goodList}>
-                        <Iscroll width="80%"></Iscroll>
+                        <Iscroll width="80%" arr={this.state.arr}></Iscroll>
                     </div>
                 </div>
                 <Myloading openLoading={this.state.openLoading}></Myloading>

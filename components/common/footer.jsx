@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css'
+import Style from './footer.css'
 const TabBarDemo = React.createClass({
     getInitialState() {
         var selectName
@@ -21,18 +21,18 @@ const TabBarDemo = React.createClass({
 
     render() {
         return (
-            <footer className="_bar">
-                <a href="index.html" className={this.state.selected=="home"?"onActive":''}>
-                    <a className="iconfont icon-icon-test1 f2m "></a>
+            <footer className={Style._bar}>
+                <a href="index.html" className={this.state.selected=="home"?Style.onActive:''}>
+                    <a className="iconfont icon-icon-test1 f1m "></a>
                     <p>首页</p>
                 </a>
-                <a href="search.html" className={this.state.selected=="search"?"onActive":''}>
-                    <a className=" f2m icon-icon-test4 iconfont"></a>
+                <a href="search.html" className={this.state.selected=="search"?Style.onActive:''}>
+                    <a className=" f1m icon-icon-test4 iconfont"></a>
                     <p>发现</p>
                 </a>
 
-                <a href="mycenter.html"  className={this.state.selected=="person"?"onActive":''}>
-                    <a className="iconfont icon-icon-test12 f2m"></a>
+                <a href="mycenter.html"  className={this.state.selected=="person"?Style.onActive:''}>
+                    <a className="iconfont icon-icon-test12 f1m"></a>
                     <p>个人中心</p>
                 </a>
                 {/*<a href="">*/}

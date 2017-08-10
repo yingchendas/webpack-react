@@ -5,7 +5,7 @@ import React from 'react';
 import '../../public/css/common/common.css';
 import './index.css';
 import Menu from '../common/menu.jsx';
-import Iscroll from '../common/iscroll.jsx'
+// import Iscroll from '../common/iscroll.jsx'
 import Footer from '../common/footer.jsx';
 import Myloading from '../common/loading.jsx';
 const register =React.createClass({
@@ -31,9 +31,7 @@ const register =React.createClass({
         return(
            <div className="clearfix">
                <Menu></Menu>
-               <div>
-                   <Iscroll width="100%"/>
-               </div>
+               {/*<Iscroll width="100%"/>*/}
                <Footer></Footer>
                <Myloading openLoading={this.state.openLoading}></Myloading>
            </div>
