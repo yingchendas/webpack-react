@@ -3,14 +3,13 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
 import '../common/rem'
 import Mycenter from './mycenter.jsx';
-import Publisher from '../common/footer.jsx';
+import Search from '../search/search.jsx';
 ReactDOM.render(
-    <Mycenter />,
-    document.getElementById('container')
-);
-ReactDOM.render(
-    <Publisher selected="person" />,
-    document.getElementById('footer')
+    ( <Router history={hashHistory}>
+        <Route path="/" component={Mycenter}/>
+        <Route path="/repos" component={Search}/>
+    </Router>),document.getElementById('container')
 );

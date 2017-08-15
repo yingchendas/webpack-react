@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Footer from '../common/footer.jsx';
 const Mycenter =React.createClass({
     getInitialState(){
         return(
@@ -211,6 +212,7 @@ const Mycenter =React.createClass({
                         <div className="weui_cell_ft"></div>
                     </a>
                 </div>
+                <Footer></Footer>
             </div>
 
         )

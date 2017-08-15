@@ -12,6 +12,7 @@
         <!--<link rel="stylesheet" href="https://npmcdn.com/amazeui-touch@1.0.0-beta.3/dist/amazeui.touch.min.css">-->
 		<link rel="stylesheet" href="../css/weui.min.css" />
 		<link rel="stylesheet" href="../css/common/common.css" />
+		<link rel="stylesheet" href="../css/pullToRefresh.css">
 		<style type="text/css">
 			.userBox{
 				background: #fff;
@@ -45,6 +46,15 @@
 		<div id="footer"></div>
 	</body>
 	<script src="../js/lib/jquery-1.7.min.js"></script>
-	<script type="text/javascript" src="../js/lib/global.js"></script>
-    <script src="../js/mycenterbundle.js"></script>
+	<script src="../js/lib/mui.js"></script>
+	<script src="../js/lib/iscroll.js"></script>
+	<script src="../js/lib/pullToRefresh.js"></script>
+	<script src="../js/lib/fastclick.min.js"></script>
+	<script src="../js/mycenterbundle.js"></script>
+	<script>
+        $(function () {
+            FastClick.attach(document.body)
+        })
+	</script>
+
 </html>
