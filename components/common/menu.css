@@ -42,7 +42,7 @@
     position: absolute;
     left:0;
     top:.15rem;
-    /*width: 100%;*/ /*不能为100%，不然宽度只有父容器的宽度，我掉进这个坑了。*/
+    /*width: 100%;*/ /*能为100%，不然宽度只有父容器的宽度，我掉进这个坑了。*/
     transition: all 1s;
     height:100%;
     /*line-height: 2.6;*/
